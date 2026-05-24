@@ -267,7 +267,7 @@ end
 function Repo:run_callbacks(id)
   for source, fn in pairs(self.refresh_callbacks) do
     logger.debug("[REPO]: (" .. id .. ") Running callback for " .. source)
-    fn()
+    a.void(fn)()
   end
 
   self.refresh_callbacks = {}
